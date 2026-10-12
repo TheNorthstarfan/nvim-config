@@ -2,7 +2,7 @@
 return {
   {
     "nvim-lualine/lualine.nvim",
-    event = "VeryLazy", -- only load when a file opens or is written
+    event = "VeryLazy",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
@@ -12,21 +12,21 @@ return {
       -- Credit: glepnir
       local lualine = require("lualine")
 
-			-- Color table for highlights
-			-- stylua: ignore
-			local colors = {
-			  bg       = '#313244', -- different from regular catppuccin to make it stand out
-			  fg       = '#cdd6f4',
-			  yellow   = '#f9e2af',
-			  cyan     = '#94e2d5',
-			  darkblue = '#181825',
-			  green    = '#a6e3a1',
-			  orange   = '#fab387',
-			  violet   = '#b4befe',
-			  magenta  = '#cba6f7',
-			  blue     = '#89b4fa',
-			  red      = '#f38ba8',
-			}
+      -- Color table for highlights
+      -- stylua: ignore
+      local colors = {
+        bg       = '#313244', -- different from regular catppuccin to make it stand out
+        fg       = '#cdd6f4',
+        yellow   = '#f9e2af',
+        cyan     = '#94e2d5',
+        darkblue = '#181825',
+        green    = '#a6e3a1',
+        orange   = '#fab387',
+        violet   = '#b4befe',
+        magenta  = '#cba6f7',
+        blue     = '#89b4fa',
+        red      = '#f38ba8',
+      }
 
       local conditions = {
         buffer_not_empty = function()
@@ -52,13 +52,7 @@ return {
           -- Disable sections and component separators
           component_separators = "",
           section_separators = "",
-          theme = {
-            -- We are going to use lualine_c an lualine_x as left and
-            -- right section. Both are highlighted by c theme .  So we
-            -- are just setting default looks o statusline
-            normal = { c = { fg = colors.fg, bg = colors.bg } },
-            inactive = { c = { fg = colors.fg, bg = colors.bg } },
-          },
+          theme = "auto"
         },
         extensions = { "nvim-tree" },
         sections = {
@@ -96,14 +90,14 @@ return {
         function()
           return "▊"
         end,
-        color = { fg = colors.blue }, -- Sets highlighting of component
+        color = { fg = colors.blue },      -- Sets highlighting of component
         padding = { left = 0, right = 1 }, -- We don't need space before this
       })
 
       ins_left({
         -- mode component
         function()
-          return " "
+          return " "
         end,
         color = function()
           -- auto change color according to neovims mode
@@ -192,7 +186,7 @@ return {
 
       -- Add components to right sections
       ins_right({
-        "o:encoding", -- option component same as &encoding in viml
+        "o:encoding",       -- option component same as &encoding in viml
         fmt = string.upper, -- I'm not sure why it's upper case either ;)
         cond = conditions.hide_in_width,
         color = { fg = colors.green, gui = "bold" },
