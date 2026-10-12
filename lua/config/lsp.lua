@@ -1,4 +1,3 @@
-local lspconfig = require("lspconfig")
 -- this makes it so code stuff is only shown if an LSP is available
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
