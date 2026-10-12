@@ -39,3 +39,23 @@ map({ "n", "v" }, ";", ":", { noremap = true })
 map("n", "<leader>si", function()
   Snacks.picker.icons()
 end, { noremap = true, desc = "Snacks icon picker" })
+
+map("n", "<leader>bd", function()
+  vim.cmd("bd")
+end, { noremap = true, desc = "Delete buffer", silent = true })
+
+map("n", "<leader>bn", function()
+  vim.cmd("bnext")
+end, { noremap = true, desc = "Next buffer", silent = true })
+
+map("n", "<leader>bp", function()
+  vim.cmd("bprevious")
+end, { noremap = true, desc = "Previous buffer", silent = true })
+
+map("n", "<S-l>", function()
+  vim.cmd("bnext")
+end, { noremap = true, desc = "Next buffer", silent = true })
+
+map("n", "<S-h>", function()
+  vim.cmd("bprevious")
+end, { noremap = true, desc = "Previous buffer", silent = true })

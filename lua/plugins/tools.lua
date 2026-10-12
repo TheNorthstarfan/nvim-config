@@ -23,6 +23,7 @@ return {
         { "<leader>t", group = "Telescope" },
         { "<leader>l", group = "Lazy", icon = "󰒲 " },
         { "<leader>s", group = "Snacks", icon = " " },
+        { "<leader>b", group = "Buffer", icon = " " },
       })
     end,
     keys = {
