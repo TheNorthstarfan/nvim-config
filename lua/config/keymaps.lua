@@ -1,6 +1,13 @@
 -- make it easier to type
 local map = vim.keymap.set
 
+-- disable sinful arrow keys
+for _, mode in ipairs({ "n", "i", "v" }) do
+  for _, key in ipairs({ "<Up>", "<Down>", "<Left>", "<Right>" }) do
+    map(mode, key, "<nop>", { noremap = true, silent = true })
+  end
+end
+
 -- telescope keymaps
 map("n", "<leader>tf", function()
   vim.cmd("Telescope find_files hidden=true")
