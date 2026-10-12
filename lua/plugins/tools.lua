@@ -103,4 +103,10 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     opts = {},
   },
+  -- markdown preview
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+  }
 }
