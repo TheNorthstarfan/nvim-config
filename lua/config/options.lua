@@ -13,3 +13,20 @@ vim.o.wrap = true
 vim.o.confirm = true
 
 vim.cmd("syntax on")
+
+-- set clipboard properly for WSL
+if vim.fn.has("wsl") then
+  vim.g.clipboard = {
+    name = "win32yank-wsl",
+    copy = {
+      ["+"] = "/mnt/c/tools/win32yank.exe -i --crlf",
+      ["*"] = "/mnt/c/tools/win32yank.exe -i --crlf",
+    },
+    paste = {
+      ["+"] = "/mnt/c/tools/win32yank.exe -i --lf",
+      ["*"] = "/mnt/c/tools/win32yank.exe -i --lf",
+    },
+    cache_enabled = 0,
+  }
+  vim.opt.clipboard = "unnamedplus"
+end
