@@ -59,3 +59,5 @@ end, { noremap = true, desc = "Next buffer", silent = true })
 map("n", "<S-h>", function()
   vim.cmd("bprevious")
 end, { noremap = true, desc = "Previous buffer", silent = true })
+
+map("n", "<leader><leader>", "<C-^>", { silent = true, desc = "Switch to previous buffer", noremap = true })
