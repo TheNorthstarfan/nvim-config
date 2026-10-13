@@ -44,3 +44,20 @@ if not vim.lsp.is_enabled("clangd") then
   })
   vim.lsp.enable("clangd")
 end
+
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
+      workspace = {
+        checkThirdParty = false,
+      },
+      completion = {
+        callSnippet = "Replace",
+      },
+    },
+  },
+})
+vim.lsp.enable("lua_ls")

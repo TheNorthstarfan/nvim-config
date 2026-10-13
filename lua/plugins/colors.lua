@@ -16,6 +16,7 @@ return {
   },
   {
     "folke/tokyonight.nvim",
+    enabled = false,
     event = "VeryLazy",
   },
 }

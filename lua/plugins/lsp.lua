@@ -2,9 +2,11 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPost", "BufNewFile" },
   },
   {
     "mason-org/mason.nvim",
+    event = "VeryLazy",
     opts = {},
   },
   {

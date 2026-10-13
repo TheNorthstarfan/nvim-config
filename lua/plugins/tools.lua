@@ -3,6 +3,7 @@ return {
   -- telescope
   {
     "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     version = "*",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -47,7 +48,7 @@ return {
   -- tree-sitter
   {
     "nvim-treesitter/nvim-treesitter",
-    lazy = false,
+    event = { "BufReadPost", "BufNewFile" },
     -- pin to old 0.11 compatible version until gentoo catches up
     commit = vim.fn.has("nvim-0.12") == 0 and "7caec274fd19c12b55902a5b795100d21531391f" or nil,
     build = ":TSUpdate",
