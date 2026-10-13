@@ -7,7 +7,11 @@ return {
   {
     "mason-org/mason.nvim",
     event = "VeryLazy",
-    opts = {},
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+      },
+    },
   },
   {
     "mason-org/mason-lspconfig.nvim",
