@@ -11,3 +11,16 @@ autocmd("FileType", {
     vim.opt_local.expandtab = true
   end,
 })
+--
+-- man item under cursor in C and shell files
+autocmd("FileType", {
+  pattern = { "c", "sh", "bash" },
+  callback = function()
+    vim.keymap.set("n", "<leader>K", function()
+      vim.cmd("Man " .. vim.fn.expand("<cword>"))
+    end, { desc = "Open manpage", noremap = true })
+    require("which-key").add({
+      { "<leader>K", icon = " " },
+    })
+  end,
+})
