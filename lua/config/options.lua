@@ -5,6 +5,9 @@ vim.o.expandtab = true
 -- both number and relativenumber for good relative scrolling
 vim.o.number = true
 vim.o.relativenumber = true
+-- highlight cursor line
+vim.o.cursorline = true
+vim.o.cursorlineopt = "number"
 
 vim.o.scrolloff = 8
 

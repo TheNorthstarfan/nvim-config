@@ -10,15 +10,12 @@ return {
       flavour = "mocha",
       no_italic = false,
     },
-    -- config = function()
-    --   vim.cmd("colorscheme catppuccin")
-    -- end,
+    config = function()
+      vim.cmd("colorscheme catppuccin")
+    end,
   },
   {
     "folke/tokyonight.nvim",
     event = "VeryLazy",
-    config = function()
-      vim.cmd.colorscheme("tokyonight-moon")
-    end
   },
 }

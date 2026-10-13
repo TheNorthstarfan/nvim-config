@@ -14,12 +14,14 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
-      preset = "modern",
+      preset = "helix",
     },
     config = function(_, opts)
       local wk = require("which-key")
       wk.setup(opts)
       wk.add({
+        -- some which-key additions are in the area of their
+        -- relevant plugin or autocmd
         { "<leader>t", group = "Telescope" },
         { "<leader>l", group = "Lazy", icon = "󰒲 " },
         { "<leader>s", group = "Snacks", icon = " " },
@@ -108,5 +110,5 @@ return {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
-  }
+  },
 }
