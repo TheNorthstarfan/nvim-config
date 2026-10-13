@@ -14,6 +14,8 @@ return {
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
+    ---@module 'which-key'
+    ---@type wk.Opts
     opts = {
       preset = "helix",
     },
@@ -89,6 +91,8 @@ return {
       { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle File Explorer" },
     },
     config = function()
+      ---@module 'nvim-tree'
+      ---@type nvim_tree.config
       require("nvim-tree").setup({
         sort_by = "case_sensitive",
         view = {
