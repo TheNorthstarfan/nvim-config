@@ -118,4 +118,13 @@ return {
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
   },
+  -- comment toggling
+  {
+    "numToStr/Comment.nvim",
+    opts = {},
+    keys = {
+      { "gc", mode = { "n", "v" }, desc = "Toggle Comment line" },
+      { "gb", mode = { "n", "v" }, desc = "Toggle Comment block" },
+    },
+  },
 }
