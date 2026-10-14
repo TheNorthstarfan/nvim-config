@@ -1,22 +1,25 @@
+-- Set unused colorschemes in this file to `event = "VeryLazy"`
+-- Gonna set the actual colourscheme itself in options.lua from now on.
 ---@type LazySpec
 return {
   {
     "catppuccin/nvim",
     name = "Catppuccin",
-    lazy = false,
     ---@module "catppuccin"
     ---@type CatppuccinOptions
     opts = {
       flavour = "mocha",
       no_italic = false,
     },
-    config = function()
-      vim.cmd("colorscheme catppuccin")
-    end,
   },
   {
     "folke/tokyonight.nvim",
-    enabled = false,
-    event = "VeryLazy",
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+  },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    build = false,
   },
 }

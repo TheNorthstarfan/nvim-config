@@ -2,6 +2,9 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
+-- set colourscheme here
+vim.cmd.colorscheme("catppuccin")
+
 -- both number and relativenumber for good relative scrolling
 vim.o.number = true
 vim.o.relativenumber = true

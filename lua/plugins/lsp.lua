@@ -2,7 +2,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPost", "BufNewFile" },
+    event = "VeryLazy",
   },
   {
     "mason-org/mason.nvim",
@@ -15,6 +15,7 @@ return {
   },
   {
     "mason-org/mason-lspconfig.nvim",
+    event = "VeryLazy",
     opts = {},
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
