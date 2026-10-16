@@ -68,3 +68,5 @@ map("n", "<S-h>", function()
 end, { noremap = true, desc = "Previous buffer", silent = true })
 
 map("n", "<leader><leader>", "<C-^>", { silent = true, desc = "Switch to previous buffer", noremap = true })
+
+map("i", "jj", "<Esc>", { silent = true, desc = "Exit insert mode" })
