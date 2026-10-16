@@ -14,12 +14,15 @@ return {
   },
   {
     "folke/tokyonight.nvim",
+    event = "VeryLazy",
   },
   {
     "ellisonleao/gruvbox.nvim",
+    event = "VeryLazy",
   },
   {
     "nyoom-engineering/oxocarbon.nvim",
+    event = "VeryLazy",
     build = false,
   },
 }
