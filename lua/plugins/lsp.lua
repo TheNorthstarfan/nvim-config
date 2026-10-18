@@ -25,6 +25,8 @@ return {
   -- conform - formatters
   {
     "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile", "BufWritePre" },
+    cmd = { "ConformInfo" },
     ---@module "conform"
     ---@type conform.setupOpts
     opts = {

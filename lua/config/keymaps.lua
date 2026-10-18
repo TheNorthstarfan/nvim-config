@@ -29,6 +29,14 @@ map("n", "<leader>tC", function()
   vim.cmd("Telescope find_files cwd=~/.config/nvim-from-scratch/")
 end, { noremap = true, desc = "Find Config Files" })
 
+map(
+  "n",
+  "<leader>tr",
+  "<cmd>Telescope oldfiles<CR>",
+  { noremap = true, silent = true, desc = "Telescope recent files" }
+)
+
+-- Lazy.nvim keymaps
 map("n", "<leader>ll", function()
   vim.cmd("Lazy")
 end, { noremap = true, desc = "Lazy" })
