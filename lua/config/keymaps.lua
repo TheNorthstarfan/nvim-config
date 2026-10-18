@@ -70,3 +70,9 @@ end, { noremap = true, desc = "Previous buffer", silent = true })
 map("n", "<leader><leader>", "<C-^>", { silent = true, desc = "Switch to previous buffer", noremap = true })
 
 map("i", "jj", "<Esc>", { silent = true, desc = "Exit insert mode" })
+
+-- centre after scrolling with ctrl + d, u, f, b
+map("n", "<C-d>", "<C-d>zz", { silent = true })
+map("n", "<C-u>", "<C-u>zz", { silent = true })
+map("n", "<C-f>", "<C-f>zz", { silent = true })
+map("n", "<C-b>", "<C-b>zz", { silent = true })
