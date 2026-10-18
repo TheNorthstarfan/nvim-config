@@ -38,8 +38,10 @@ vim.diagnostic.config({
 })
 
 if not vim.lsp.is_enabled("clangd") then
+  ---@type vim.lsp.Config
   vim.lsp.config("clangd", {
     cmd = { "clangd", "--background-index" },
+    filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
     root_markers = { "compile_commands.json", ".clangd", ".git" },
   })
   vim.lsp.enable("clangd")
