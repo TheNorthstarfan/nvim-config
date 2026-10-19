@@ -84,3 +84,6 @@ map("n", "<C-d>", "<C-d>zz", { silent = true })
 map("n", "<C-u>", "<C-u>zz", { silent = true })
 map("n", "<C-f>", "<C-f>zz", { silent = true })
 map("n", "<C-b>", "<C-b>zz", { silent = true })
+
+map("n", "G", "Gzz", { silent = true })
+map("n", "gg", "ggzz", { silent = true })
