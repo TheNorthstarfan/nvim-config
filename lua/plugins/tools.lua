@@ -29,6 +29,7 @@ return {
         { "<leader>l", group = "Lazy", icon = "󰒲 " },
         { "<leader>s", group = "Snacks", icon = " " },
         { "<leader>b", group = "Buffer", icon = " " },
+        { "<leader>M", icon = " " },
       })
     end,
     keys = {
