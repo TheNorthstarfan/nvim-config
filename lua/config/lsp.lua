@@ -63,3 +63,6 @@ vim.lsp.config("lua_ls", {
   },
 })
 vim.lsp.enable("lua_ls")
+
+-- make clangd view C header files as using C syntax
+vim.g.c_syntax_for_h = 1
