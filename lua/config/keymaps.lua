@@ -89,3 +89,5 @@ map("n", "G", "Gzz", { silent = true })
 map("n", "gg", "ggzz", { silent = true })
 
 map("n", "<leader>M", "<Cmd>Mason<CR>", { silent = true, desc = "Open Mason", noremap = true })
+
+map("n", "<Esc>", "<Cmd>nohl<CR>", { silent = true })
