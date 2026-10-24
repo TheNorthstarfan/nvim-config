@@ -9,9 +9,7 @@ for _, mode in ipairs({ "n", "i", "v" }) do
 end
 
 -- telescope keymaps
-map("n", "<leader>tf", function()
-  vim.cmd("Telescope find_files hidden=true")
-end, { noremap = true, desc = "Find files" })
+map("n", "<leader>tf", "<CMD>Telescope find_files hidden=true<CR>", { noremap = true, desc = "Find files", silent = true })
 
 map("n", "<leader>tb", function()
   vim.cmd("Telescope buffers")
