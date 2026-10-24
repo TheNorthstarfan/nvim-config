@@ -9,6 +9,8 @@ autocmd("FileType", {
     vim.opt_local.tabstop = 2
     vim.opt_local.softtabstop = 2
     vim.opt_local.expandtab = true
+
+    vim.keymap.set("n", "<leader>S", "<cmd>so<cr>", { noremap = true, silent = true, desc = "Source file" })
   end,
 })
 --
