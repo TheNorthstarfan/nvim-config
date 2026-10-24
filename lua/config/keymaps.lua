@@ -32,7 +32,7 @@ map(
 map(
   "n",
   "<leader>tr",
-  "<cmd>Telescope oldfiles<CR>",
+  "<CMD>Telescope oldfiles<CR>",
   { noremap = true, silent = true, desc = "Telescope recent files" }
 )
 
@@ -72,10 +72,10 @@ map("n", "<C-b>", "<C-b>zz", { silent = true })
 map("n", "G", "Gzz", { silent = true })
 map("n", "gg", "ggzz", { silent = true })
 
-map("n", "<leader>M", "<Cmd>Mason<CR>", { silent = true, desc = "Open Mason", noremap = true })
+map("n", "<leader>M", "<CMD>Mason<CR>", { silent = true, desc = "Open Mason", noremap = true })
 
-map("n", "<Esc>", "<Cmd>nohl<CR>", { silent = true })
-map("n", "<leader>T", "<Cmd>terminal<CR>", { silent = true, desc = "Open Terminal", noremap = true })
+map("n", "<Esc>", "<CMD>nohl<CR>", { silent = true })
+map("n", "<leader>T", "<CMD>terminal<CR>", { silent = true, desc = "Open Terminal", noremap = true })
 
 map({ "n", "v" }, "j", "gj", { silent = true })
 map({ "n", "v" }, "k", "gk", { silent = true })
