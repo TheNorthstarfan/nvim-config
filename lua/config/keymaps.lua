@@ -9,23 +9,25 @@ for _, mode in ipairs({ "n", "i", "v" }) do
 end
 
 -- telescope keymaps
-map("n", "<leader>tf", "<CMD>Telescope find_files hidden=true<CR>", { noremap = true, desc = "Find files", silent = true })
+map(
+  "n",
+  "<leader>tf",
+  "<CMD>Telescope find_files hidden=true<CR>",
+  { noremap = true, desc = "Find files", silent = true }
+)
 
-map("n", "<leader>tb", function()
-  vim.cmd("Telescope buffers")
-end, { noremap = true, desc = "Telescope buffers" })
+map("n", "<leader>tb", "<CMD>Telescope buffers<CR>", { silent = true, noremap = true, desc = "Telescope buffers" })
 
-map("n", "<leader>tc", function()
-  vim.cmd("Telescope colorscheme")
-end, { noremap = true, desc = "Colourschemes" })
+map("n", "<leader>tc", "<CMD>Telescope colorscheme<CR>", { silent = true, noremap = true, desc = "Colourschemes" })
 
-map("n", "<leader>tg", function()
-  vim.cmd("Telescope live_grep hidden=true")
-end, { noremap = true, desc = "Live Grep" })
+map("n", "<leader>tg", "<CMD>Telescope live_grep hidden=true", { silent = true, noremap = true, desc = "Live Grep" })
 
-map("n", "<leader>tC", function()
-  vim.cmd("Telescope find_files cwd=~/.config/nvim-from-scratch/")
-end, { noremap = true, desc = "Find Config Files" })
+map(
+  "n",
+  "<leader>tC",
+  "<CMD>Telescope find_files cwd=~/.config/nvim-from-scratch/<CR>",
+  { silent = true, noremap = true, desc = "Find Config Files" }
+)
 
 map(
   "n",
@@ -35,43 +37,27 @@ map(
 )
 
 -- Lazy.nvim keymaps
-map("n", "<leader>ll", function()
-  vim.cmd("Lazy")
-end, { noremap = true, desc = "Lazy" })
+map("n", "<leader>ll", "<CMD>Lazy<CR>", { silent = true, noremap = true, desc = "Lazy" })
 
-map("n", "<leader>lu", function()
-  vim.cmd("Lazy update")
-end, { noremap = true, desc = "Update plugins" })
+map("n", "<leader>lu", "<CMD>Lazy update<CR>", { silent = true, noremap = true, desc = "Update plugins" })
 
-map("n", "<leader>ls", function()
-  vim.cmd("Lazy sync")
-end, { noremap = true, desc = "Lazy Sync" })
+map("n", "<leader>ls", "<CMD>Lazy sync", { silent = true, noremap = true, desc = "Lazy Sync" })
 
 map({ "n", "v" }, ";", ":", { noremap = true })
 
 map("n", "<leader>si", function()
-  Snacks.picker.icons()
+  require("snacks").picker.icons()
 end, { noremap = true, desc = "Snacks icon picker" })
 
-map("n", "<leader>bd", function()
-  vim.cmd("bd")
-end, { noremap = true, desc = "Delete buffer", silent = true })
+map("n", "<leader>bd", "<CMD>bd<CR>", { noremap = true, desc = "Delete buffer", silent = true })
 
-map("n", "<leader>bn", function()
-  vim.cmd("bnext")
-end, { noremap = true, desc = "Next buffer", silent = true })
+map("n", "<leader>bn", "<CMD>bnext<CR>", { noremap = true, desc = "Next buffer", silent = true })
 
-map("n", "<leader>bp", function()
-  vim.cmd("bprevious")
-end, { noremap = true, desc = "Previous buffer", silent = true })
+map("n", "<leader>bp", "<CMD>bprevious<CR>", { noremap = true, desc = "Previous buffer", silent = true })
 
-map("n", "<S-l>", function()
-  vim.cmd("bnext")
-end, { noremap = true, desc = "Next buffer", silent = true })
+map("n", "<S-l>", "<CMD>bnext<CR>", { noremap = true, desc = "Next buffer", silent = true })
 
-map("n", "<S-h>", function()
-  vim.cmd("bprevious")
-end, { noremap = true, desc = "Previous buffer", silent = true })
+map("n", "<S-h>", "<CMD>bprevious<CR>", { noremap = true, desc = "Previous buffer", silent = true })
 
 map("n", "<leader><leader>", "<C-^>", { silent = true, desc = "Switch to previous buffer", noremap = true })
 
