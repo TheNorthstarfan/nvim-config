@@ -128,4 +128,13 @@ return {
       { "gb", mode = { "n", "v" }, desc = "Toggle Comment block" },
     },
   },
+  -- images
+  {
+    "3rd/image.nvim",
+    build = false,
+    ft = { "html", "markdown", "neorg" },
+    opts = {
+      processor = "magick_cli",
+    },
+  },
 }
