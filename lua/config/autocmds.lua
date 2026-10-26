@@ -26,3 +26,13 @@ autocmd("FileType", {
     })
   end,
 })
+
+-- stop CSS from treating universal rules (*) as multiline comments
+autocmd("FileType", {
+  pattern = "css",
+  callback = function()
+    -- stop `*` from being seen as a comment
+    vim.opt.local_comments = "s1:/*,mb:*,ex:*/"
+    vim.opt_local.formatoptions:remove({ "r", "o" })
+  end,
+})
