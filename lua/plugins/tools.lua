@@ -77,7 +77,7 @@ return {
   -- colour preview
   {
     "norcalli/nvim-colorizer.lua",
-    event = "BufRead",
+    event = { "BufRead", "BufNewFile" },
     config = function()
       require("colorizer").setup()
     end,
