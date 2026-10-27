@@ -54,7 +54,7 @@ return {
   -- IDE-like breadcrumbs
   {
     "Bekaboo/dropbar.nvim",
-    event = { "BufRead", "BufNewFile", "BufWrite" },
+    event = { "BufReadPre", "BufNewFile", "BufWrite" },
     dependencies = {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },

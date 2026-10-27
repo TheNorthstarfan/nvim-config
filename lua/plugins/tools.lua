@@ -28,8 +28,8 @@ return {
         { "<leader>t", group = "Telescope" },
         { "<leader>l", group = "Lazy", icon = "󰒲 " },
         { "<leader>s", group = "Snacks", icon = " " },
-        { "<leader>b", group = "Buffer", icon = " " },
-        { "<leader>M", icon = " " },
+        { "<leader>b", group = "Buffer", icon = "󰓩 " },
+        { "<leader>M", icon = "󰒋 " },
       })
     end,
     keys = {
@@ -137,5 +137,51 @@ return {
     opts = {
       processor = "magick_cli",
     },
+  },
+  -- flash.nvim
+  {
+    "folke/flash.nvim",
+    ---@type Flash.Config
+    opts = {},
+    keys = {
+      {
+        "s",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Flash",
+      },
+      {
+        "S",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").treesitter()
+        end,
+        desc = "Flash Treesitter",
+      },
+    },
+  },
+  -- treesitter texobjects - yank in function and whatnot
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    event = { "BufReadPost", "BufNewFile" },
+    config = function()
+      local select = require("nvim-treesitter-textobjects.select")
+
+      vim.keymap.set({ "x", "o" }, "if", function()
+        select.select_textobject("@function.inner")
+      end, { desc = "Inner function" })
+      vim.keymap.set({ "x", "o" }, "af", function()
+        select.select_textobject("@function.outer")
+      end, { desc = "Inner function" })
+      vim.keymap.set({ "x", "o" }, "ic", function()
+        select.select_textobject("@class.inner")
+      end, { desc = "Inner function" })
+      vim.keymap.set({ "x", "o" }, "ac", function()
+        select.select_textobject("@class.outer")
+      end, { desc = "Inner function" })
+    end,
   },
 }
