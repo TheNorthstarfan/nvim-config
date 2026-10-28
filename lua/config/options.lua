@@ -18,6 +18,9 @@ vim.o.wrap = true
 
 vim.o.confirm = true
 
+-- ignore case in searching
+vim.o.ignorecase = true
+
 vim.cmd("syntax on")
 
 -- set clipboard properly for WSL

@@ -79,3 +79,5 @@ map("n", "<leader>T", "<CMD>terminal<CR>", { silent = true, desc = "Open Termina
 
 map({ "n", "v" }, "j", "gj", { silent = true })
 map({ "n", "v" }, "k", "gk", { silent = true })
+
+map("n", "<leader>Q", "<CMD>q<CR>", { noremap = true, silent = true, desc = "Quit Neovim" })
