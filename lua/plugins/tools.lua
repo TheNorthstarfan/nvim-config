@@ -143,6 +143,7 @@ return {
     "folke/flash.nvim",
     ---@type Flash.Config
     opts = {},
+    event = { "BufRead", "BufNewFile" },
     keys = {
       {
         "s",
