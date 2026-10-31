@@ -23,8 +23,10 @@ vim.o.ignorecase = true
 
 vim.cmd("syntax on")
 
--- set clipboard properly for WSL
-if vim.fn.has("wsl") then
+-- set clipboard properly for WSL and regular linux
+local is_wsl = (vim.fn.has("unix") == 1) and vim.fn.system("uname -r"):lower():match("microsoft")
+vim.opt.clipboard = "unnamedplus"
+if is_wsl then
   vim.g.clipboard = {
     name = "win32yank-wsl",
     copy = {
@@ -37,5 +39,4 @@ if vim.fn.has("wsl") then
     },
     cache_enabled = 0,
   }
-  vim.opt.clipboard = "unnamedplus"
 end

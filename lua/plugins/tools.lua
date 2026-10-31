@@ -76,7 +76,7 @@ return {
   },
   -- colour preview
   {
-    "norcalli/nvim-colorizer.lua",
+    "catgoose/nvim-colorizer.lua",
     event = { "BufRead", "BufNewFile" },
     config = function()
       require("colorizer").setup()
