@@ -7,16 +7,17 @@ return {
   {
     "mason-org/mason.nvim",
     event = "VeryLazy",
-    opts = {
-      ensure_installed = {
-        "lua_ls",
-      },
-    },
+    opts = {},
   },
   {
     "mason-org/mason-lspconfig.nvim",
     event = "VeryLazy",
-    opts = {},
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "stylua",
+      },
+    },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
       "neovim/nvim-lspconfig",
