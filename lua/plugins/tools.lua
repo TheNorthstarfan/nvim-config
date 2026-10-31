@@ -55,11 +55,16 @@ return {
     main = "nvim-treesitter",
     -- pin to old 0.11 compatible version until gentoo catches up
     commit = vim.fn.has("nvim-0.12") == 0 and "7caec274fd19c12b55902a5b795100d21531391f" or nil,
+    branch = "main",
     build = ":TSUpdate",
-    opts = {
-      ensure_installed = { "lua", "markdown_inline", "toml", "html" },
-      highlight = { enabled = true },
-    },
+    config = function()
+      require("nvim-treesitter").setup()
+      require("nvim-treesitter").install({
+        "lua",
+        "c",
+        "python",
+      })
+    end,
   },
   -- snacks
   {
