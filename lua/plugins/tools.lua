@@ -58,11 +58,12 @@ return {
     branch = "main",
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter").setup()
+      require("nvim-treesitter").setup({})
       require("nvim-treesitter").install({
         "lua",
         "c",
         "python",
+        "zsh",
       })
     end,
   },
@@ -98,6 +99,8 @@ return {
       { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle File Explorer" },
     },
     config = function()
+      vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
       ---@module 'nvim-tree'
       ---@type nvim_tree.config
       require("nvim-tree").setup({

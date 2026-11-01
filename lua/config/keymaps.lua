@@ -36,6 +36,8 @@ map(
   { noremap = true, silent = true, desc = "Telescope recent files" }
 )
 
+map("n", "<leader>tm", "<CMD>Telescope man_pages<CR>", { noremap = true, silent = true, desc = "Telescope man pages" })
+
 -- Lazy.nvim keymaps
 map("n", "<leader>ll", "<CMD>Lazy<CR>", { silent = true, noremap = true, desc = "Lazy" })
 

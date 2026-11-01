@@ -36,3 +36,11 @@ autocmd("FileType", {
     vim.opt_local.formatoptions:remove({ "r", "o" })
   end,
 })
+
+-- attempt to start treesitter when a buffer loads
+autocmd({ "BufReadPost", "BufNewFile" }, {
+  desc = "Attempt to start treesitter when a buffer loads",
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
