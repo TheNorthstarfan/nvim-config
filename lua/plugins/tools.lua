@@ -124,9 +124,9 @@ return {
   },
   -- markdown preview
   {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    "OXY2DEV/markview.nvim",
     ft = { "markdown" },
+    dependencies = { "saghen/blink.cmp" },
   },
   -- comment toggling
   {
