@@ -9,6 +9,14 @@ return {
       "nvim-lua/plenary.nvim",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
+    opts = {
+      pickers = {
+        man_pages = {
+          sections = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "n", "l" },
+          man_defaults = { value = { "+0", "" } },
+        },
+      },
+    },
   },
   -- which key
   {
