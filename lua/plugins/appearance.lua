@@ -1,3 +1,10 @@
+local function macro_recording()
+  local reg = vim.fn.reg_recording()
+  if reg == "" then
+    return ""
+  end
+  return "Recording @" .. reg
+end
 ---@type LazySpec
 return {
   {
@@ -12,6 +19,13 @@ return {
         globalstatus = true,
         disabled_filetypes = {
           statusline = { "snacks_dashboard", "dashboard", "alpha" },
+        },
+      },
+      sections = {
+        lualine_c = {
+          {
+            macro_recording,
+          },
         },
       },
     },
