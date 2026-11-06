@@ -24,6 +24,9 @@ return {
       sections = {
         lualine_c = {
           {
+            "filename",
+          },
+          {
             macro_recording,
           },
         },
