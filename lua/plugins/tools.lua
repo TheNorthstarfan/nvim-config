@@ -134,6 +134,7 @@ return {
   {
     "OXY2DEV/markview.nvim",
     ft = { "markdown" },
+    cmd = "Markview",
     dependencies = { "saghen/blink.cmp" },
   },
   -- comment toggling
