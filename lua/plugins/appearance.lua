@@ -93,4 +93,16 @@ return {
       vim.keymap.set("n", "];", dropbar_api.goto_context_start, { desc = "Select next context" })
     end,
   },
+  -- zen mode and code dimming
+  -- also has block of code required in .wezterm.lua for wezterm
+  -- see https://github.com/folke/zen-mode.nvim
+  {
+    "folke/zen-mode.nvim",
+    cmd = "ZenMode",
+    keys = {
+      { "<leader>Z", "<CMD>ZenMode<CR>", mode = "n", desc = "Toggle Zen Mode" },
+    },
+    opts = {},
+    dependencies = { "folke/twilight.nvim", opts = { treesitter = true }, lazy = true },
+  },
 }
