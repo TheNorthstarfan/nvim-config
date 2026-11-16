@@ -31,12 +31,11 @@ return {
       local wk = require("which-key")
       wk.setup(opts)
       wk.add({
-        -- some which-key additions are in the area of their
-        -- relevant plugin or autocmd
+        -- some which-key additions are in the spec of their relevant plugin or autocmd
         { "<leader>l", group = "Lazy", icon = "󰒲 " },
         { "<leader>s", group = "Search", icon = " " },
         { "<leader>b", group = "Buffer", icon = "󰓩 " },
-        { "<leader>M", icon = "󰒋 " },
+        { "<leader>M", icon = "󰒋 " }, -- mason
       })
     end,
     keys = {
