@@ -20,7 +20,12 @@ map("n", "<leader>sb", "<CMD>Telescope buffers<CR>", { silent = true, noremap = 
 
 map("n", "<leader>sc", "<CMD>Telescope colorscheme<CR>", { silent = true, noremap = true, desc = "Colourschemes" })
 
-map("n", "<leader>sg", "<CMD>Telescope live_grep hidden=true", { silent = true, noremap = true, desc = "Live Grep" })
+map(
+  "n",
+  "<leader>sg",
+  "<CMD>Telescope live_grep hidden=true<CR>",
+  { silent = true, noremap = true, desc = "Live Grep" }
+)
 
 map(
   "n",
@@ -43,7 +48,7 @@ map("n", "<leader>ll", "<CMD>Lazy<CR>", { silent = true, noremap = true, desc = 
 
 map("n", "<leader>lu", "<CMD>Lazy update<CR>", { silent = true, noremap = true, desc = "Update plugins" })
 
-map("n", "<leader>ls", "<CMD>Lazy sync", { silent = true, noremap = true, desc = "Lazy Sync" })
+map("n", "<leader>ls", "<CMD>Lazy sync<CR>", { silent = true, noremap = true, desc = "Lazy Sync" })
 
 map({ "n", "v" }, ";", ":", { noremap = true })
 
