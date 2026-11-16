@@ -33,9 +33,8 @@ return {
       wk.add({
         -- some which-key additions are in the area of their
         -- relevant plugin or autocmd
-        { "<leader>t", group = "Telescope" },
         { "<leader>l", group = "Lazy", icon = "󰒲 " },
-        { "<leader>s", group = "Snacks", icon = " " },
+        { "<leader>s", group = "Search", icon = " " },
         { "<leader>b", group = "Buffer", icon = "󰓩 " },
         { "<leader>M", icon = "󰒋 " },
       })

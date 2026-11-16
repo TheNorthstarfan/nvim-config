@@ -11,32 +11,32 @@ end
 -- telescope keymaps
 map(
   "n",
-  "<leader>tf",
+  "<leader>sf",
   "<CMD>Telescope find_files hidden=true<CR>",
   { noremap = true, desc = "Find files", silent = true }
 )
 
-map("n", "<leader>tb", "<CMD>Telescope buffers<CR>", { silent = true, noremap = true, desc = "Telescope buffers" })
+map("n", "<leader>sb", "<CMD>Telescope buffers<CR>", { silent = true, noremap = true, desc = "Telescope buffers" })
 
-map("n", "<leader>tc", "<CMD>Telescope colorscheme<CR>", { silent = true, noremap = true, desc = "Colourschemes" })
+map("n", "<leader>sc", "<CMD>Telescope colorscheme<CR>", { silent = true, noremap = true, desc = "Colourschemes" })
 
-map("n", "<leader>tg", "<CMD>Telescope live_grep hidden=true", { silent = true, noremap = true, desc = "Live Grep" })
+map("n", "<leader>sg", "<CMD>Telescope live_grep hidden=true", { silent = true, noremap = true, desc = "Live Grep" })
 
 map(
   "n",
-  "<leader>tC",
+  "<leader>sC",
   "<CMD>Telescope find_files cwd=~/.config/nvim-from-scratch/<CR>",
   { silent = true, noremap = true, desc = "Find Config Files" }
 )
 
 map(
   "n",
-  "<leader>tr",
+  "<leader>sr",
   "<CMD>Telescope oldfiles<CR>",
   { noremap = true, silent = true, desc = "Telescope recent files" }
 )
 
-map("n", "<leader>tm", "<CMD>Telescope man_pages<CR>", { noremap = true, silent = true, desc = "Telescope man pages" })
+map("n", "<leader>sm", "<CMD>Telescope man_pages<CR>", { noremap = true, silent = true, desc = "Telescope man pages" })
 
 -- Lazy.nvim keymaps
 map("n", "<leader>ll", "<CMD>Lazy<CR>", { silent = true, noremap = true, desc = "Lazy" })
