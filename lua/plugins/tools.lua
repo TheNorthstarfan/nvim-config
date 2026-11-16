@@ -58,6 +58,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TSUpdate", "TSInstall", "TSInstallFromGrammar", "TSUninstall", "TSUpdate", "TSLog" },
     main = "nvim-treesitter",
     -- pin to old 0.11 compatible version until gentoo catches up
     commit = vim.fn.has("nvim-0.12") == 0 and "7caec274fd19c12b55902a5b795100d21531391f" or nil,
